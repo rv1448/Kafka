@@ -23,8 +23,8 @@ public class Kafkaproducer {
 
 //      producer.send(new ProducerRecord<String, String>("first_topic", "b","a"));
 //      producer.send(new ProducerRecord<String, String>("first_topic", "File","Description"));
-        for(int i=0; i < 20; i++){
-            producer.send(new ProducerRecord<String, String>("first_topic", Integer.toString(i),Integer.toString(i*2)));
+       for(int i=0; i < 20; i++){
+            producer.send(new ProducerRecord<String, String>("first_topic", Integer.toString(i),Integer.toString(i)));
         }
         producer.close();
     }

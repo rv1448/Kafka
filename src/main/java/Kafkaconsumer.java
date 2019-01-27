@@ -24,11 +24,11 @@ public class Kafkaconsumer {
         while(true){
             ConsumerRecords<String, String> consumerrecords = consumer.poll(100);
             for(ConsumerRecord<String, String> consumerrecord : consumerrecords){
-                consumerrecord.key();
-                consumerrecord.value();
-                consumerrecord.offset();
-                consumerrecord.partition();
-                consumerrecord.timestamp();
+//                consumerrecord.key();
+//                consumerrecord.value();
+//                consumerrecord.offset();
+//                consumerrecord.partition();
+//                consumerrecord.timestamp();
 
                 System.out.println("Partition: "+ consumerrecord.partition()+
                         ", Key: "+consumerrecord.key()+
