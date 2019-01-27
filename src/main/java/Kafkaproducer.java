@@ -21,9 +21,11 @@ public class Kafkaproducer {
         properties.setProperty("linger.ms", "1");
         Producer<String, String> producer = new KafkaProducer<String,String>(properties);
 
-//            producer.send(new ProducerRecord<String, String>("first_topic", "b","a"));
-        producer.send(new ProducerRecord<String, String>("first_topic", "File","Description"));
-
+//      producer.send(new ProducerRecord<String, String>("first_topic", "b","a"));
+//      producer.send(new ProducerRecord<String, String>("first_topic", "File","Description"));
+        for(int i=0; i < 20; i++){
+            producer.send(new ProducerRecord<String, String>("first_topic", Integer.toString(i),Integer.toString(i*2)));
+        }
         producer.close();
     }
 
