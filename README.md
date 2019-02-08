@@ -14,3 +14,5 @@ kafka-topics --create --topic test_cleanup --zookeeper 192.168.99.100:2181 --con
 <h4> AWS EC2 install kafka</h4> 
 uptime
 hostname -f
+
+sudo yum install java
