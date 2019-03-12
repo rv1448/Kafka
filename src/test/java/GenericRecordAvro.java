@@ -32,6 +32,16 @@ public class GenericRecordAvro {
         customerbuilder.set("automated_email",false);
         GenericData.Record customer = customerbuilder.build();
         System.out.print(customer);
+
+
+        GenericRecordBuilder customerbuilderdefault = new GenericRecordBuilder(schema);
+        customerbuilderdefault.set("first_name","rahul");
+        customerbuilderdefault.set("last_name","Vangala");
+        customerbuilderdefault.set("age",29);
+        customerbuilderdefault.set("height",5.12f);
+        customerbuilderdefault.set("weight",170);
+        GenericData.Record customerdefault = customerbuilder.build();
+        System.out.print(customerdefault);
         //Step 2 Write the generic record to a file
         //Step 3 read a generic record from a file
         //Step 4 Interpret a generic record
